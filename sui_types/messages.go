@@ -204,6 +204,7 @@ type ObjectArg struct {
 		InitialSharedVersion SequenceNumber
 		Mutable              bool
 	}
+	Receiving *ObjectRef
 }
 
 func (o ObjectArg) IsBcsEnum() {
@@ -215,6 +216,8 @@ func (o ObjectArg) id() ObjectID {
 		return o.ImmOrOwnedObject.ObjectId
 	case o.SharedObject != nil:
 		return o.SharedObject.Id
+	case o.Receiving != nil:
+		return o.Receiving.ObjectId
 	default:
 		return ObjectID{}
 	}
