@@ -57,6 +57,16 @@ type ProgrammableTransaction struct {
 	Commands []Command
 }
 
+func (p ProgrammableTransaction) ContainsShareObjects() bool {
+	for _, input := range p.Inputs {
+		if input.Object != nil && input.Object.SharedObject != nil {
+			return true
+		}
+	}
+
+	return false
+}
+
 type Command struct {
 	MoveCall        *ProgrammableMoveCall
 	TransferObjects *struct {
