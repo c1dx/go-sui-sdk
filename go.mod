@@ -1,4 +1,4 @@
-module github.com/c1dx/go-sui
+module github.com/c1dx/go-sui-sdk
 
 go 1.18
 
@@ -12,7 +12,6 @@ require (
 	github.com/stretchr/testify v1.8.0
 	github.com/tyler-smith/go-bip39 v1.1.0
 	golang.org/x/crypto v0.0.0-20200622213623-75b288015ac9
-
 )
 
 require (
@@ -22,4 +21,4 @@ require (
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
 
-replace github.com/coming-chat/go-sui/v2  => github.com/c1dx/go-sui v0.1.0
+replace github.com/coming-chat/go-sui/v2 => github.com/c1dx/go-sui-sdk v0.1.0
