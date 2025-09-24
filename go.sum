@@ -11,8 +11,6 @@ github.com/btcsuite/websocket v0.0.0-20150119174127-31079b680792/go.mod h1:ghJtE
 github.com/btcsuite/winsvc v1.0.0/go.mod h1:jsenWakMcC0zFBFurPLEAyrnc/teJEM1O46fmI40EZs=
 github.com/coming-chat/go-aptos v0.0.0-20221013022715-39f91035c785 h1:xIOXIW3uXakffHoVqA6qkyUgYYuhJWLPohIyR1tBS38=
 github.com/coming-chat/go-aptos v0.0.0-20221013022715-39f91035c785/go.mod h1:HaGBPmQOlKzxkbGancRSX8wcwDxvj9Zs173CSla43vE=
-github.com/coming-chat/go-sui/v2 v2.0.2-0.20241114052830-23a2bc259c29 h1:kz4xZ0NFsEsxsT0Xfeh5w7TVA+uFzbmWOXVp9ioDqO8=
-github.com/coming-chat/go-sui/v2 v2.0.2-0.20241114052830-23a2bc259c29/go.mod h1:CEcT3hIMwYmEoBEHWrBkEQOgwdO02slYt8iUxdVeJLQ=
 github.com/davecgh/go-spew v0.0.0-20171005155431-ecdeabc65495/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
 github.com/davecgh/go-spew v1.1.0/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
 github.com/davecgh/go-spew v1.1.1 h1:vj9j/u1bqnvCEfJOwUhtlOARqs3+rkHYY13jYWTU97c=

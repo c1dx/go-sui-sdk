@@ -1,11 +1,10 @@
-module github.com/c1dx/go-sui-sdk
+module github.com/coming-chat/go-sui/v2
 
 go 1.18
 
 require (
 	github.com/btcsuite/btcutil v1.0.2
 	github.com/coming-chat/go-aptos v0.0.0-20221013022715-39f91035c785
-	github.com/coming-chat/go-sui/v2 v2.0.2-0.20241114052830-23a2bc259c29
 	github.com/fardream/go-bcs v0.4.0
 	github.com/mitchellh/hashstructure/v2 v2.0.2
 	github.com/shopspring/decimal v1.3.1
