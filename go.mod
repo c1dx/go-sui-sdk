@@ -19,5 +19,3 @@ require (
 	golang.org/x/sys v0.8.0 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
-
-replace github.com/coming-chat/go-sui/v2 => github.com/c1dx/go-sui-sdk v0.1.0
