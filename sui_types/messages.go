@@ -4,7 +4,6 @@ import (
 	"github.com/coming-chat/go-sui/v2/lib"
 	"github.com/coming-chat/go-sui/v2/move_types"
 	"github.com/coming-chat/go-sui/v2/sui_protocol"
-	"github.com/coming-chat/go-sui/v2/sui_types"
 )
 
 type TransactionData struct {
@@ -32,11 +31,11 @@ func (t TransactionExpiration) IsBcsEnum() {
 }
 
 type ValidDuringExpiration struct {
-	MinEpoch     *sui_types.EpochId `bcs:"optional"`
-	MaxEpoch     *sui_types.EpochId `bcs:"optional"`
-	MinTimestamp *uint64            `bcs:"optional"`
-	MaxTimestamp *uint64            `bcs:"optional"`
-	Chain        sui_types.CheckpointDigest
+	MinEpoch     *EpochId `bcs:"optional"`
+	MaxEpoch     *EpochId `bcs:"optional"`
+	MinTimestamp *uint64  `bcs:"optional"`
+	MaxTimestamp *uint64  `bcs:"optional"`
+	Chain        CheckpointDigest
 	Nonce        uint32
 }
 
