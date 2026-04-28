@@ -4,6 +4,7 @@ import (
 	"github.com/coming-chat/go-sui/v2/lib"
 	"github.com/coming-chat/go-sui/v2/move_types"
 	"github.com/coming-chat/go-sui/v2/sui_protocol"
+	"github.com/coming-chat/go-sui/v2/sui_types"
 )
 
 type TransactionData struct {
@@ -22,11 +23,21 @@ type TransactionDataV1 struct {
 }
 
 type TransactionExpiration struct {
-	None  *lib.EmptyEnum
-	Epoch *EpochId
+	None        *lib.EmptyEnum
+	Epoch       *EpochId
+	ValidDuring *ValidDuringExpiration
 }
 
 func (t TransactionExpiration) IsBcsEnum() {
+}
+
+type ValidDuringExpiration struct {
+	MinEpoch     *sui_types.EpochId `bcs:"optional"`
+	MaxEpoch     *sui_types.EpochId `bcs:"optional"`
+	MinTimestamp *uint64            `bcs:"optional"`
+	MaxTimestamp *uint64            `bcs:"optional"`
+	Chain        sui_types.CheckpointDigest
+	Nonce        uint32
 }
 
 type GasData struct {
