@@ -210,11 +210,40 @@ type GenesisObject struct {
 }
 
 type CallArg struct {
-	Pure   *[]byte
-	Object *ObjectArg
+	Pure            *[]byte
+	Object          *ObjectArg
+	FundsWithdrawal *FundsWithdrawalArg
 }
 
 func (c CallArg) IsBcsEnum() {
+}
+
+type FundsWithdrawalArg struct {
+	Reservation  WithdrawalReservation
+	TypeArg      WithdrawalTypeArg
+	WithdrawFrom WithdrawFrom
+}
+
+type WithdrawalReservation struct {
+	MaxAmountU64 *uint64
+}
+
+func (r WithdrawalReservation) IsBcsEnum() {
+}
+
+type WithdrawalTypeArg struct {
+	Balance *move_types.TypeTag
+}
+
+func (w WithdrawalTypeArg) IsBcsEnum() {
+}
+
+type WithdrawFrom struct {
+	Sender  *lib.EmptyEnum
+	Sponsor *lib.EmptyEnum
+}
+
+func (w WithdrawFrom) IsBcsEnum() {
 }
 
 type ObjectArg struct {
