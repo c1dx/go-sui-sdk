@@ -25,6 +25,7 @@ type TransactionExpiration struct {
 	None        *lib.EmptyEnum
 	Epoch       *EpochId
 	ValidDuring *ValidDuringExpiration
+	Validity    *ValidityExpiration
 }
 
 func (t TransactionExpiration) IsBcsEnum() {
